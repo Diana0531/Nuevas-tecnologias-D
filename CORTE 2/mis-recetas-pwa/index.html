@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Recetas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Mis Recetas</h1>
+        <nav class="nav">
+          <a href="#">Inicio</a>
+          <a href="#recetas">Recetas</a>
+          <a href="#favoritas">Favoritas</a>
+          <a href="#hechas">Hechas</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h2>Descubre recetas fáciles y deliciosas</h2>
+        <p>
+          Consulta recetas, guarda tus favoritas y marca las que ya preparaste.
+        </p>
+        <input type="text" id="buscador" placeholder="Buscar receta..." />
+      </div>
+    </section>
+
+    <main class="container">
+      <section id="recetas">
+        <h2 class="section-title">Recetas disponibles</h2>
+        <div class="cards" id="contenedor-recetas"></div>
+      </section>
+
+      <section id="favoritas" class="extra-section">
+        <h2 class="section-title">Mis favoritas</h2>
+        <div class="cards" id="contenedor-favoritas"></div>
+      </section>
+
+      <section id="hechas" class="extra-section">
+        <h2 class="section-title">Recetas hechas</h2>
+        <div class="cards" id="contenedor-hechas"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Mis Recetas PWA - Proyecto académico</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de receta | Mis Recetas</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#ff7043">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>Mis Recetas</h1>
+      <p class="sub-header">Descubre sabores deliciosos para cada momento</p>
+    </div>
+  </header>
+
+  <main class="detalle-page">
+    <section class="detalle-hero">
+      <div class="container">
+        <p class="detalle-mini">Receta destacada</p>
+        <h2>Detalle de la receta</h2>
+        <p>Consulta ingredientes, preparación y disfruta una experiencia más visual y organizada.</p>
+      </div>
+    </section>
+
+    <section class="detalle-contenido">
+      <div class="container">
+        <div id="detalle-receta"></div>
+
+        <div class="volver-box">
+          <a href="index.html" class="btn-volver">← Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Mis Recetas PWA - Proyecto académico</p>
+  </footer>
+
+  <script src="app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .then(() => console.log("Service Worker registrado"))
+          .catch(error => console.log("Error al registrar el Service Worker:", error));
+      });
+    }
+  </script>
+
+</body>
+</html>
